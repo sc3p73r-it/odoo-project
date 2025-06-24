@@ -90,9 +90,8 @@ server {
         proxy_pass http://odoo:8072;
     }
 }
-
+```
 ### Run the Setup
 ```
 docker-compose up --build -d
 ```
-
