@@ -104,3 +104,7 @@ server {
 ```
 docker-compose up --build -d
 ```
+### Login Odoo on Browser
+```
+http://localhost
+```
