@@ -12,7 +12,7 @@ odoo-docker/
 ### Create docker-compose.yml
 
 ```
-version: '3.9'
+version: '3.8'
 
 services:
   db:
@@ -35,6 +35,15 @@ services:
       HOST: db
       USER: odoo
       PASSWORD: odoo
+    command: >
+      odoo
+      --db_host=db
+      --db_user=odoo
+      --db_password=odoo
+      -d odoo
+      --init=base
+      --without-demo=all
+      --xmlrpc-interface=0.0.0.0
     ports:
       - "8069:8069"
     volumes:
